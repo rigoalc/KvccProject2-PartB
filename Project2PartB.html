@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Project 2 Part B</title>
+<!--
+Part A – (50 Points) -
+    Create a web page that will use JavaScript.
+    Build a function that will take two parameters.
+
+    Inside the function, perform 5 separate actions:
+    Add, subtract, multiply, divide and perform modulus on the two numbers.
+
+    Call the function four separate times and use the following values as arguments to be passed to the function:
+
+    -5, 5
+    10, 5
+    5, -10
+    -10, -5
+    Display the results to the user with a short description of each result.
+-->
+<script>
+
+function convertDonomination(value1)
+
+{
+  value1 = parseFloat(value1);
+
+  var pesos = value1 * 1.234;
+  var euros = value1 * 1.345;
+  var rupee = value1 * 1.567;
+  var rubles = value1 * 1.567;
+
+  var msg = "Results of using " + value1 + " in us dollars, you get :<br>";
+  msg += pesos + " rubles <br>";
+  msg += euros + " rubles <br>";
+  msg += rupee + " rubles <br>";
+  msg += rubles + " rubles <br><hr>";
+
+  document.getElementById('outputPara').innerHTML += msg;
+
+}
+</script>
+</head>
+<body>
+<p id="outputPara"></p>
+
+<script>
+  convertDonomination(1)
+  convertDonomination(10);
+  convertDonomination(100);
+  convertDonomination(1000);
+</script>
+</body>
+</html>
